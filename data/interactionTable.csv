@@ -1,0 +1,16 @@
+CurrentState,KeyTyped,KeyCode,MouseEvent,ClickableName,MapDirection,NextState
+Splash,,,mouseReleased,,,Instructions
+Instructions,,,,StartGame,,Start
+Start,,,,,S,Conference
+Conference,,,,,S,Computer
+Conference,,,,,N,Start
+Computer,,,,,N,Conference
+Computer,,,,,E,Hallway
+Hallway,,,,,W,Computer
+Hallway,,,,,E,Coffee
+Coffee,,,,,W,Hallway
+Coffee,,,,,N,Desk
+Desk,,,,,S,Coffee
+Desk,,,,,N,End
+End,,,,,S,Desk
+End,,,,,E,Splash
