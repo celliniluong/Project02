@@ -156,20 +156,10 @@ class InstructionsScreen extends PNGRoom {
   // preload is where we define OUR variables
   // Best not to use constructor() functions for sublcasses of PNGRoom
   // AdventureManager calls preload() one time, during startup
-  preload() {
-    // These are out variables in the InstructionsScreen class
-    this.textBoxWidth = (width/6)*4;
-    this.textBoxHeight = (height/6)*4; 
-
-    // hard-coded, but this could be loaded from a file if we wanted to be more elegant
-    this.instructionsText = "Place instructions";
-  }
-
-  // call the PNGRoom superclass's draw function to draw the background image
-  // and draw our instructions on top of this
+  preload() {}
+    
   draw() {
-    // tint down background image so text is more readable
-    tint(128);
+   
       
     // this calls PNGRoom.draw()
     super.draw();
