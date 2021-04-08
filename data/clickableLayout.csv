@@ -2,3 +2,6 @@ ID,Name,State,PNGFilename,Text,x,y,visible
 0,StartGame,Instructions,,Start Game,100,650,yes
 1,In,ClockIn,assets/IN.png,,210,530,yes
 2,Out,ClockOut,assets/OUT.png,,210,530,yes
+3,Pen,Petition,assets/pen.png,,525,355,yes
+4,ConferenceChat,Conference,assets/chat.png,,320,155,yes
+5,CoffeeChat,Coffee,assets/hello.png,,205,205,yes
