@@ -121,21 +121,21 @@ function setupClickables() {
   for( let i = 0; i < clickables.length; i++ ) {
     clickables[i].onHover = clickableButtonHover;
     clickables[i].onOutside = clickableButtonOnOutside;
-    clickables[i].onPress = clickableButtonPressed;
+    clickables[i].onPress = clickableButtonPressed; 
   }
 }
 
 // tint when mouse is over
 clickableButtonHover = function () {
-  this.color = "#AA33AA";
+  this.color = "#F7F7F7";
   this.noTint = false;
-  this.tint = "#FF0000";
+  this.tint = "#F7F7F7";
 }
 
 // color a light gray if off
 clickableButtonOnOutside = function () {
   // backto our gray color
-  this.color = "#AAAAAA";
+  this.color = "#F7F7F7";
 }
 
 clickableButtonPressed = function() {

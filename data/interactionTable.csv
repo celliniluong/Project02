@@ -8,7 +8,8 @@ Conference,,,,ConferenceChat,,ConferenceChat
 ConferenceChat,,,,,S,Computer
 ConferenceChat,,,,,N,ClockIn
 Computer,,,,,N,ConferenceChat
-Computer,,,,,E,Hallway
+Computer,,,,Audit,,ComputerTwo
+ComputerTwo,,,,,E,Hallway
 Hallway,,,,,W,Computer
 Hallway,,,,,E,Coffee
 Coffee,,,,CoffeeChat,,CoffeeChat
