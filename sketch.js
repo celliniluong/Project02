@@ -2,8 +2,10 @@
   Project 02
   by Cellini Luong
 
-  Project Abstract
-  
+ My game is focused on the gender wage gap. The narrative features a character who has just graduated college and is having her first day at her new job. 
+ The gender wage gap is an issue that she has yet to experience yourself, but she is determined to advocate and push for an equal paying workplace. 
+ To understand how to close the pay gap, she navigates the office. She has conversations with other advocates, completes a pay audit, and takes other actions to educate herself.
+ Her main goal is to rewrite the construct of a male-dominated workplace for all women. 
 
 ***********************************************************************************/
 
@@ -83,13 +85,8 @@ function keyPressed() {
     fs = fullscreen();
     fullscreen(!fs);
     return;
-  }
+  }  
 
-  // dispatch key events for adventure manager to move from state to 
-  // state or do special actions - this can be disabled for NPC conversations
-  // or text entry   
-
-  // dispatch to elsewhere
   adventureManager.keyPressed(key); 
 }
 
@@ -147,11 +144,6 @@ clickableButtonPressed = function() {
 
 
 //-------------- SUBCLASSES / YOUR DRAW CODE CAN GO HERE ---------------//
-
-
-// Instructions screen has a backgrounnd image, loaded from the adventureStates table
-// It is sublcassed from PNGRoom, which means all the loading, unloading and drawing of that
-// class can be used. We call super() to call the super class's function as needed
 class InstructionsScreen extends PNGRoom {
   // preload is where we define OUR variables
   // Best not to use constructor() functions for sublcasses of PNGRoom
@@ -174,45 +166,134 @@ class InstructionsScreen extends PNGRoom {
   }
 }
 
-class Start extend PNGRoom {
+class StartRoom extends PNGRoom {
 
-	preload() {}
+	preload() {
+    // Loading Arrows 
+      this.arrowSprite = createSprite(660, 660, 63, 36);
 
-	draw() {}
-}
-class ComputerTwo extends PNGRoom {
+      this.arrowSprite.addAnimation('regular', loadAnimation('assets/arrows/down-01.png', 'assets/arrows/down-04.png'));
+      print(this.arrowSprite);
+  }
 
-	preload() {}
+  draw() {
+    super.draw();
 
-	draw() {}
-}
-
-class PetitionTwo extends PNGRoom {
-
-	preload() {}
-
-	draw() {}
+    // Drawing Arrows
+    drawSprite(this.arrowSprite);
+  }
 }
 
-class CoffeeChat extends PNGRoom {
+class ConferenceChatRoom extends PNGRoom {
 
-	preload() {}
+  preload() {
+    // Loading Arrows
+      this.arrowSprite = createSprite(660, 660, 63, 36);
 
-	draw() {}
+      this.arrowSprite.addAnimation('regular', loadAnimation('assets/arrows/down-01.png', 'assets/arrows/down-04.png'));
+      print(this.arrowSprite);
+  }
+
+  draw() {
+    super.draw();
+
+    // Drawing Arrows
+    drawSprite(this.arrowSprite);
+  }
 }
 
-class ConferenceChat extends PNGRoom {
+class ComputerTwoRoom extends PNGRoom {
 
-	preload() {}
+	preload() {
+		 // Loading Arrows
+  		this.arrowSprite = createSprite(660, height/2, 63, 36);
 
-	draw() {}
+  		this.arrowSprite.addAnimation('regular', loadAnimation('assets/arrows/right-01.png', 'assets/arrows/right-04.png'));
+  		print(this.arrowSprite);
+	}
+
+	draw() {
+		super.draw();
+
+		// Drawing Arrows
+		drawSprite(this.arrowSprite);
+	}
 }
 
-class Hallway extends PNGRoom {
+class HallwayRoom extends PNGRoom {
 
-	preload() {}
+  preload() {
+    // Loading Arrows
+      this.arrowSprite = createSprite(660, height/2, 63, 36);
 
-	draw() {}
+      this.arrowSprite.addAnimation('regular', loadAnimation('assets/arrows/right-01.png', 'assets/arrows/right-04.png'));
+      print(this.arrowSprite);
+  }
+
+  draw() {
+    super.draw();
+
+    // Drawing Arrows
+    drawSprite(this.arrowSprite);
+  }
 }
+
+class PetitionSignedRoom extends PNGRoom {
+
+  preload() {
+     // Loading Arrows
+      this.arrowSprite = createSprite(660, 60, 63, 36);
+
+      this.arrowSprite.addAnimation('regular', loadAnimation('assets/arrows/up-01.png', 'assets/arrows/up-04.png'));
+      print(this.arrowSprite);
+  }
+
+  draw() {
+    super.draw();
+
+    // Drawing Arrows
+    drawSprite(this.arrowSprite);
+  }
+}
+
+class CoffeeChatRoom extends PNGRoom {
+
+  preload() {
+     // Loading Arrows
+      this.arrowSprite = createSprite(660, 60, 63, 36);
+
+      this.arrowSprite.addAnimation('regular', loadAnimation('assets/arrows/up-01.png', 'assets/arrows/up-04.png'));
+      print(this.arrowSprite);
+  }
+
+  draw() {
+    super.draw();
+
+    // Drawing Arrows
+    drawSprite(this.arrowSprite);
+  }
+}
+
+class EndRoom extends PNGRoom {
+
+  preload() {
+     // Loading Arrows
+      this.arrowSprite = createSprite(500, 660, 663, 36);
+
+      this.arrowSprite.addAnimation('regular', loadAnimation('assets/arrows/right-01.png', 'assets/arrows/right-04.png'));
+      print(this.arrowSprite);
+  }
+
+  draw() {
+    super.draw();
+
+   // Drawing Arrows
+    drawSprite(this.arrowSprite);
+  }
+}
+
+
+
+
 
 

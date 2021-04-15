@@ -1,5 +1,5 @@
 ID,Name,State,PNGFilename,Text,x,y,visible
-0,StartGame,Instructions,assets/StartGame.png,,255,620,yes
+0,StartGame,Instructions,assets/StartGame.png,,270,620,yes
 1,In,ClockIn,assets/IN.png,,210,530,yes
 2,Out,ClockOut,assets/OUT.png,,210,530,yes
 3,Pen,Petition,assets/pen.png,,540,245,yes
