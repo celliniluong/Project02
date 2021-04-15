@@ -174,3 +174,45 @@ class InstructionsScreen extends PNGRoom {
   }
 }
 
+class Start extend PNGRoom {
+
+	preload() {}
+
+	draw() {}
+}
+class ComputerTwo extends PNGRoom {
+
+	preload() {}
+
+	draw() {}
+}
+
+class PetitionTwo extends PNGRoom {
+
+	preload() {}
+
+	draw() {}
+}
+
+class CoffeeChat extends PNGRoom {
+
+	preload() {}
+
+	draw() {}
+}
+
+class ConferenceChat extends PNGRoom {
+
+	preload() {}
+
+	draw() {}
+}
+
+class Hallway extends PNGRoom {
+
+	preload() {}
+
+	draw() {}
+}
+
+
